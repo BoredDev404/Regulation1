@@ -28,6 +28,19 @@
         "habit_calories": false,
         "habit_journal": false,
         "timestamp": "2024-01-14T21:15:00Z"
+      },
+      "2024-01-13": {
+        "boredom": 4,
+        "stress": 3,
+        "screenTime": 1.5,
+        "pmoStatus": "Passed",
+        "calories": 2400,
+        "protein": 140,
+        "habit_hygiene": true,
+        "habit_workout": true,
+        "habit_calories": true,
+        "habit_journal": true,
+        "timestamp": "2024-01-13T19:45:00Z"
       }
     },
     "relapses": [
@@ -35,6 +48,7 @@
         "date": "2024-01-14",
         "cause": "Boredom",
         "time": "Evening",
+        "notes": "Was home alone, nothing to do",
         "timestamp": "2024-01-14T20:45:00Z"
       }
     ],
@@ -54,10 +68,42 @@
             "sets": 3,
             "reps": 12,
             "weight": 40
+          },
+          {
+            "name": "Tricep Pushdown",
+            "sets": 3,
+            "reps": 15,
+            "weight": 30
           }
         ],
-        "totalVolume": 3600,
+        "totalVolume": 5400,
         "timestamp": "2024-01-15T18:30:00Z"
+      },
+      {
+        "date": "2024-01-13",
+        "type": "Pull",
+        "exercises": [
+          {
+            "name": "Pull-ups",
+            "sets": 3,
+            "reps": 8,
+            "weight": 0
+          },
+          {
+            "name": "Barbell Rows",
+            "sets": 3,
+            "reps": 10,
+            "weight": 70
+          },
+          {
+            "name": "Bicep Curls",
+            "sets": 3,
+            "reps": 12,
+            "weight": 20
+          }
+        ],
+        "totalVolume": 2580,
+        "timestamp": "2024-01-13T19:00:00Z"
       }
     ],
     "moods": [
@@ -66,7 +112,16 @@
         "time": "Morning",
         "mood": "Focused",
         "energy": 7,
+        "notes": "Good sleep, ready for the day",
         "timestamp": "2024-01-15T09:00:00Z"
+      },
+      {
+        "date": "2024-01-15",
+        "time": "Evening",
+        "mood": "Tired",
+        "energy": 4,
+        "notes": "Long day, but productive",
+        "timestamp": "2024-01-15T21:00:00Z"
       }
     ],
     "habits": {
@@ -74,6 +129,10 @@
       "workout": 0.70,
       "calories": 0.65,
       "journal": 0.45
+    },
+    "settings": {
+      "lastExport": "2024-01-15T20:30:00Z",
+      "version": "1.0.0"
     }
   }
 }
