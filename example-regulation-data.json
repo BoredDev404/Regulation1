@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "data": {
+    "dailyLogs": {
+      "2024-01-15": {
+        "boredom": 3,
+        "stress": 5,
+        "screenTime": 2.5,
+        "pmoStatus": "Passed",
+        "calories": 2200,
+        "protein": 150,
+        "weight": 75.2,
+        "habit_hygiene": true,
+        "habit_workout": true,
+        "habit_calories": true,
+        "habit_journal": false,
+        "timestamp": "2024-01-15T20:30:00Z"
+      },
+      "2024-01-14": {
+        "boredom": 7,
+        "stress": 8,
+        "screenTime": 4.5,
+        "pmoStatus": "Relapsed",
+        "calories": 2800,
+        "protein": 120,
+        "habit_hygiene": true,
+        "habit_workout": false,
+        "habit_calories": false,
+        "habit_journal": false,
+        "timestamp": "2024-01-14T21:15:00Z"
+      }
+    },
+    "relapses": [
+      {
+        "date": "2024-01-14",
+        "cause": "Boredom",
+        "time": "Evening",
+        "timestamp": "2024-01-14T20:45:00Z"
+      }
+    ],
+    "workouts": [
+      {
+        "date": "2024-01-15",
+        "type": "Push",
+        "exercises": [
+          {
+            "name": "Bench Press",
+            "sets": 3,
+            "reps": 10,
+            "weight": 80
+          },
+          {
+            "name": "Shoulder Press",
+            "sets": 3,
+            "reps": 12,
+            "weight": 40
+          }
+        ],
+        "totalVolume": 3600,
+        "timestamp": "2024-01-15T18:30:00Z"
+      }
+    ],
+    "moods": [
+      {
+        "date": "2024-01-15",
+        "time": "Morning",
+        "mood": "Focused",
+        "energy": 7,
+        "timestamp": "2024-01-15T09:00:00Z"
+      }
+    ],
+    "habits": {
+      "hygiene": 0.85,
+      "workout": 0.70,
+      "calories": 0.65,
+      "journal": 0.45
+    }
+  }
+}
