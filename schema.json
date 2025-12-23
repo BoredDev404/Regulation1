@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Regulation Data Schema",
+  "description": "Schema for personal regulation data storage",
+  "type": "object",
+  "required": ["schemaVersion", "data"],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Version of the schema (major.minor)"
+    },
+    "data": {
+      "type": "object",
+      "required": ["dailyLogs"],
+      "properties": {
+        "dailyLogs": {
+          "type": "object",
+          "patternProperties": {
+            "^\\d{4}-\\d{2}-\\d{2}$": {
+              "type": "object",
+              "properties": {
+                "boredom": { "type": "integer", "minimum": 0, "maximum": 10 },
+                "stress": { "type": "integer", "minimum": 0, "maximum": 10 },
+                "screenTime": { "type": "number", "minimum": 0, "maximum": 24 },
+                "pmoStatus": { "type": "string", "enum": ["Passed", "Relapsed", ""] },
+                "calories": { "type": "integer", "minimum": 0 },
+                "protein": { "type": "integer", "minimum": 0 },
+                "weight": { "type": "number", "minimum": 0 },
+                "habit_hygiene": { "type": "boolean" },
+                "habit_workout": { "type": "boolean" },
+                "habit_calories": { "type": "boolean" },
+                "habit_journal": { "type": "boolean" },
+                "timestamp": { "type": "string", "format": "date-time" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "relapses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["date", "cause"],
+            "properties": {
+              "date": { "type": "string", "format": "date" },
+              "cause": { "type": "string", "enum": ["Boredom", "Stress", "Habitual", "Other"] },
+              "time": { "type": "string", "enum": ["Morning", "Afternoon", "Evening", "Night"] },
+              "timestamp": { "type": "string", "format": "date-time" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "workouts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["date", "type"],
+            "properties": {
+              "date": { "type": "string", "format": "date" },
+              "type": { "type": "string" },
+              "exercises": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["name"],
+                  "properties": {
+                    "name": { "type": "string" },
+                    "sets": { "type": "integer", "minimum": 1 },
+                    "reps": { "type": "integer", "minimum": 1 },
+                    "weight": { "type": "number", "minimum": 0 }
+                  }
+                }
+              },
+              "totalVolume": { "type": "number", "minimum": 0 },
+              "timestamp": { "type": "string", "format": "date-time" }
+            }
+          }
+        },
+        "moods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["date"],
+            "properties": {
+              "date": { "type": "string", "format": "date" },
+              "time": { "type": "string" },
+              "mood": { "type": "string" },
+              "energy": { "type": "integer", "minimum": 1, "maximum": 10 },
+              "timestamp": { "type": "string", "format": "date-time" }
+            }
+          }
+        },
+        "habits": {
+          "type": "object",
+          "properties": {
+            "hygiene": { "type": "number", "minimum": 0, "maximum": 1 },
+            "workout": { "type": "number", "minimum": 0, "maximum": 1 },
+            "calories": { "type": "number", "minimum": 0, "maximum": 1 },
+            "journal": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
