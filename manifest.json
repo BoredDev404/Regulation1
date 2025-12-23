@@ -1,0 +1,22 @@
+{
+    "name": "Regulation",
+    "short_name": "Regulation",
+    "description": "Personal Self-Regulation Tool",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#0f172a",
+    "theme_color": "#0f172a",
+    "icons": [
+        {
+            "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABHSURBVHgB7c6hDQAwDASxK/3/U1sQOJGBNddAeog5j0ngLckdLKcEe6HYA2EPxPQ7Bj8mG3dTp3W+bJjGuAIe2BOqN1SgCsIZCRjMAAAAAElFTkSuQmCC",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABHSURBVHgB7c6hDQAwDASxK/3/U1sQOJGBNddAeog5j0ngLckdLKcEe6HYA2EPxPQ7Bj8mG3dTp3W+bJjGuAIe2BOqN1SgCsIZCRjMAAAAAElFTkSuQmCC",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
